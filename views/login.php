@@ -1,6 +1,12 @@
 <?php
    require_once './../partials/template.php';
    
+   require './../controllers/connection.php';
+   
+   // $sql_select = "SELECT email, password FROM users";
+   // $result = mysqli_query($conn, $sql_select);
+   
+   
    function get_content(){ ?>
       <div class="container">
          <div class="row text-center my-3">
@@ -8,12 +14,12 @@
                <form action="./../controllers/authenticate.php" method="post">
                
                <div class="form-group">
-                  <label for="username">Username:</label>
-                  <input type="text" id="username" name="username" class="form-control">
+                  <label for="email">Enter Email Address:</label>
+                  <input type="text" id="email" name="email" class="form-control">
                </div>
                
                <div class="form-group">
-                  <label for="password">Password:</label>
+                  <label for="password">Enter Password:</label>
                   <input type="password" id="password" name="password" class="form-control">
                </div>
                
@@ -22,13 +28,7 @@
                </form>   
             
             </div>
-         
-         
-         
          </div>
-      
-      
-      
       </div>
       
            
