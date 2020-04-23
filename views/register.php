@@ -1,12 +1,15 @@
 <?php
    require_once './../partials/template.php';
-
+   
+   require './../controllers/connection.php';  
+   
    function get_content(){ ?>
+                          
      <div class="container">
         <div class="row">
            <div class="col-md-8 offset-md-2"> 
-               <h3 class="display-4 text-center mb-5">Registration Form</h3>
-               <form action="#" method="post" id="registrationForm" class="my-3">
+                <h3 class="display-4  mb-5">Registration Form</h3>  <!--text-center -->
+               <form action="./../controllers/process_register.php" method="post" id="registrationForm" class="my-3">
                   <div class="row">
                      <div class="col-md-6 text-center">
                         <div class="form-group">

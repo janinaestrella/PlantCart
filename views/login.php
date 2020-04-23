@@ -5,7 +5,7 @@
       <div class="container">
          <div class="row text-center my-3">
             <div class="col-md-4 offset-md-4">
-               <form action="" method="post">
+               <form action="./../controllers/authenticate.php" method="post">
                
                <div class="form-group">
                   <label for="username">Username:</label>
