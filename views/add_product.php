@@ -31,11 +31,18 @@
             <div class="form-group">
             <label for="product-category">Product Category:</label>
             <select name="product-category" id="product-category" class="form-control">
-               <option value="#">Option 1</option>
-               <option value="#">Option 2</option>
-               <option value="#">Option 3</option>
-               <option value="#">Option 4</option>
-            
+ 
+               <?php 
+                  require './../controllers/connection.php';
+                  
+                  $sql_select = "SELECT * FROM categories";
+                  $result = mysqli_query($conn, $sql_select);
+                  
+                  while ($category = mysqli_fetch_assoc($result)){ ?>
+                     <option value="<?php echo $category['id'];?>">
+                        <?php echo $category['name'];?>
+                     </option>
+               <?php  } ?>
             </select>
             </div>
          
