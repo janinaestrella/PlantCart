@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,9 +12,17 @@
       <a class="nav-item nav-link" href="./../views/add_product.php">Add Product</a>
       <a class="nav-item nav-link" href="./../views/catalog.php">Catalog</a>
       <a class="nav-item nav-link" href="./../views/cart.php">Cart</a>
-      <a class="nav-item nav-link" href="./../views/login.php">Login</a>
       <a class="nav-item nav-link" href="./../views/register.php">Register</a>
-      <a class="nav-item nav-link" href="./../controllers/logout.php">Logout</a>
+      
+      
+      <?php if(isset($_SESSION['email'])) { ?>
+        <a class="nav-item nav-link" href="./../controllers/logout.php">Logout</a>
+        
+      <?php } else { ?>
+        <a class="nav-item nav-link" href="./../views/login.php">Login</a>
+        
+      <?php } ?>
+      
     </div>
   </div>
 </nav>

@@ -1,8 +1,7 @@
-<footer class="bg-dark" id="main-footer">
-   <p class="text-center py-4 text-white my-0">
-      Copyright &copy; <i class="fab fa-opencart"></i>PushCart
-   </p>
-
-
-
+<footer class="footer mt-auto py-3">
+	<div class="container text-center">
+		<span>Copyright &copy; PushCart <i class="fas fa-shopping-cart"></i></span>
+	</div>
+   
+   
 </footer>

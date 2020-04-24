@@ -23,8 +23,9 @@
                   
    //log in if match
    if ($password){
-      echo ("log in success");
+      header ("location: ./../views/home.php");
    } else {
+      session_destroy();
       header ("location: ./../views/login.php"); //log in failed
    }
 

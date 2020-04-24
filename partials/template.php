@@ -8,24 +8,28 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
+    <script src="https://kit.fontawesome.com/c54b8d831a.js" crossorigin="anonymous"></script>
     
-    <?php 
-      require_once 'header.php'; 
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <title>Batch 57 PHP Ecommerce</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    
+    <?php
+      require_once 'header.php';
     ?>
     
-    <div class="my-3" id="main">
-    
-      <?php
-      get_content(); 
-      ?>
-      
-    </div>
-    
-    <?php 
-      require_once 'footer.php'; 
+    <main role="main" class="flex-shrink-0">
+      <div class="container">
+
+        <?php get_content(); ?>
+
+      </div>
+    </main>
+
+    <?php
+      require_once 'footer.php';
     ?>
 
     <!-- Optional JavaScript -->

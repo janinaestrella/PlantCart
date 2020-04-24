@@ -1,11 +1,5 @@
 <?php
-   require_once './../partials/template.php';
-   
-   require './../controllers/connection.php';
-   
-   // $sql_select = "SELECT email, password FROM users";
-   // $result = mysqli_query($conn, $sql_select);
-   
+   require_once './../partials/template.php'; 
    
    function get_content(){ ?>
       <div class="container">

@@ -9,8 +9,8 @@
          <div class="col-12 col-sm-10 col-md-8 mx-auto">
             <form action="./../controllers/process_category.php" method="post">
                <div class="form-group">
-               <label for="name">Category Name</label>
-               <input type="text" name="name" id="catname" class="form-control">
+               <label for="catname">Category Name</label>
+               <input type="text" name="catname" id="catname" class="form-control">
                </div>
                
                <button type="submit" class="btn btn-primary">Add Category</button>
