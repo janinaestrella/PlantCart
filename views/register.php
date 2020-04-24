@@ -6,7 +6,7 @@
      <div class="container d-flex justify-content-center align-item-center min-vh-100">
         <div class="row">
            <div class="col-md-12"> 
-                <h3 class="display-4  mb-5">Registration Form</h3>  <!--text-center -->
+                <h3 class="display-4  mb-5">Registration Form</h3> 
                <form action="./../controllers/process_register.php" method="post" id="registrationForm" class="my-3">
                   <div class="row">
                      <div class="col-md-12 text-center">

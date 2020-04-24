@@ -7,7 +7,7 @@
       <div class="row my-5">
          <div class="col-12 col-sm-10 col-md-8 mx-auto">
          <h3 class="display-4 text-center mb-5">Add Product Form</h3>
-         <form action="" method="POST" enctype="multipart/form-data">
+         <form action="./../controllers/process_product.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
             <label for="product-name">Product Name:</label>
             <input type="text" name="product-name" id="product-name" class="form-control">
@@ -15,12 +15,12 @@
             
             <div class="form-group">
             <label for="product-price">Product Price:</label>
-            <input type="text" price="product-price" id="product-price" class="form-control">
+            <input type="text" name="product-price" id="product-price" class="form-control">
             </div>
             
             <div class="form-group">
             <label for="product-image">Product Image:</label>
-            <input type="file" image="product-image" id="product-image" class="form-control-file">
+            <input type="file" name="product-image" id="product-image" class="form-control-file">
             </div>
             
             <div class="form-group">
