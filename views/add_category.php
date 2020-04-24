@@ -8,17 +8,28 @@
       <div class="row my-5">
          <div class="col-12 col-sm-10 col-md-8 mx-auto">
             <form action="./../controllers/process_category.php" method="post">
-               <div class="form-group">
-               <label for="catname">Category Name</label>
+               <!-- <div class="form-group">
+               <label for="catname" class="mr-1">Category Name</label>
                <input type="text" name="catname" id="catname" class="form-control">
+               </div> 
+               <button type="submit" class="btn btn-primary">Add Category</button> -->
+              
+               
+               <div class="input-group mb-3 shadow p-3 mb-5 bg-white rounded ">
+                  <input type="text" name="catname" id="catname" class="form-control" placeholder="Input New Category">
+                  <div class="input-group-append">
+                     <button class="btn btn-outline-primary" type="submit">Add Category</button>
+                  </div>
                </div>
                
-               <button type="submit" class="btn btn-primary">Add Category</button>
-
+               
+               
+               
             </form>
             
             <div>
-               <ul>
+               <hr>
+               <ul class ="list-group">
                   <?php   
                   require './../controllers/connection.php';
                   
@@ -27,7 +38,7 @@
 
                   while ($row = mysqli_fetch_assoc($select)){ ?>
                                                             
-                     <li><?php echo $row['name'] ?></li>
+                     <li class="list-group-item"><?php echo $row['name'] ?></li>
                   
                   <?php }; ?> 
               

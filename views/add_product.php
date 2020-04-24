@@ -20,7 +20,7 @@
             
             <div class="form-group">
             <label for="product-image">Product Image:</label>
-            <input type="file" image="product-image" id="product-image" class="form-control">
+            <input type="file" image="product-image" id="product-image" class="form-control-file">
             </div>
             
             <div class="form-group">
