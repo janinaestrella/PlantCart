@@ -12,15 +12,6 @@
    $image_tmpname = $product_image['tmp_name'];
    $image_size = $product_image['size'];
    
-   // $sql_select = "SELECT name From categories WHERE id = $product_categoryid";
-   // $select = mysqli_query($conn,$sql_select);
-   
-   // if(mysqli_num_rows($select) > 0){
-	// 	while($row = mysqli_fetch_assoc($select)) {
-   //      //what to do
-   //  }
-	// }
-   
    $is_not_image = true;
    $is_empty_file = true;
 
@@ -63,7 +54,7 @@
    
    
    
-   // -----------------------------------------
+   // -------------------------------refactor-------------------------------//
    
    
    // if (                                             //fields should not be empty
