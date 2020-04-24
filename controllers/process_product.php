@@ -12,15 +12,25 @@
    $image_tmpname = $product_image['tmp_name'];
    $image_size = $product_image['size'];
    
-    // $sql_select = "SELECT name From categories WHERE id = $product_categoryid";
+   // $sql_select = "SELECT name From categories WHERE id = $product_categoryid";
    // $select = mysqli_query($conn,$sql_select);
+   
+   // if(mysqli_num_rows($select) > 0){
+	// 	while($row = mysqli_fetch_assoc($select)) {
+   //      //what to do
+   //  }
+	// }
    
    $is_not_image = true;
    $is_empty_file = true;
 
-   #validation to check file size
-   #validation to set the limit of the file size (bytes lagi)
-   if( $image_size > 0 ){
+   #validation to check file size and fields should not be empty
+   if( $image_size > 0 &&
+      !empty($product_name) || 
+		!empty($product_price) || 
+		!empty($product_image) || 
+		!empty($product_description) || 
+		!empty($product_categoryid)){
      $is_empty_file = false;
    } 
    
