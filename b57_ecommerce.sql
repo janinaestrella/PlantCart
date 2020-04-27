@@ -97,5 +97,5 @@ ALTER TABLE `product_transactions` ADD CONSTRAINT `product_transactions_fk1` FOR
 INSERT INTO `roles`(`name`) VALUES ('admin'),('user');
 INSERT INTO `payment_modes`(`name`) VALUES ('Cash on Delivery'),('Over the Counter');
 INSERT INTO `statuses`(`name`) VALUES ('Pending'),('Processing'),('Done'),('Rejected');
-INSERT INTO `categories` (`name`) VALUES ('Accessories'), ('Gadget'), ('Clothes');
+-- INSERT INTO `categories` (`name`) VALUES ('Accessories'), ('Gadget'), ('Clothes');
 

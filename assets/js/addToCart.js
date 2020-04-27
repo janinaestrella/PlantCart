@@ -1,13 +1,14 @@
 
 let addToCartBtns = document.querySelectorAll(".addToCart");
 
+//puts buttons in an array
 addToCartBtns.forEach (
    function (addToCartBtn) {
       addToCartBtn.addEventListener("click", (indiv_button) => {
          let product_id = indiv_button.target.getAttribute("data-id");
          let product_quantity = indiv_button.target.previousElementSibling.value;
 
-         //validataion if qty is greater than 0
+         //validation if qty is greater than 0
          if (product_quantity <=0){
             alert("Please enter a valid quantity");
          } else {
@@ -24,6 +25,7 @@ addToCartBtns.forEach (
                return response.text();
             })
             .then(function(data){
+               //items in cart counter
                document.querySelector("#cart-count").innerHTML = data;
             })
 

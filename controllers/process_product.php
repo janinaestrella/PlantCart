@@ -18,7 +18,7 @@
    $is_empty_fields = true;
 
    #validation to check file size and to set a limit
-   if( $image_size > 0 && $image_size < 800000) {
+   if( $image_size > 0) {
       $is_empty_file = false;
    } 
    

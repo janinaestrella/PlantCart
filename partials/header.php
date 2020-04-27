@@ -12,7 +12,7 @@
       <a class="nav-item nav-link" href="./../views/add_product.php">Add Product</a>
       <a class="nav-item nav-link" href="./../views/catalog.php">Catalog</a>
       <a class="nav-item nav-link" href="./../views/cart.php">Cart</a>
-        <span class="badge bg-light test-dark" id="cart-count">
+        <span class="badge badge-pill bg-light text-dark" id="cart-count">
       <?php
         if(isset($_SESSION['cart'])){
           echo array_sum($_SESSION['cart']);
