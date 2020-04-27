@@ -17,6 +17,7 @@
   <body class="d-flex flex-column min-vh-100">
     
     <?php
+      // session_start();
       require_once 'header.php';
     ?>
     

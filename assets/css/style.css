@@ -1,3 +1,16 @@
 .footer {
 	background-color: #c9c2c2;
 }
+
+.jumbotron {
+	background: url(./../images/hello.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-height: 100vh;
+}
+
+/* for same size of card photos */
+img.card-img-top{
+	height: 30vh;
+	object-fit: cover;
+}

@@ -1,11 +1,10 @@
 
-let addToCartBtns = document.querySelector(".addToCart");
+let addToCartBtns = document.querySelectorAll(".addToCart");
 
-addToCartBtns.foreach (
-   function (addToCartBtns) {
-      addToCartBtns.addEventListener("click", (indiv_button) => {
+addToCartBtns.forEach (
+   function (addToCartBtn) {
+      addToCartBtn.addEventListener("click", (indiv_button) => {
          let product_id = indiv_button.target.getAttribute("data-id");
-         //console.log(product_id);
          let product_quantity = indiv_button.target.previousElementSibling.value;
 
          //validataion if qty is greater than 0
@@ -17,7 +16,7 @@ addToCartBtns.foreach (
             data.append("productId", product_id);
             data.append("productQuantity", product_quantity);
 
-            fetch("../controllers/update_cart.php", {
+            fetch("./../controllers/update_cart.php", {
                method: "POST", 
                body: data
             })

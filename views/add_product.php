@@ -1,8 +1,11 @@
 <?php
    require_once './../partials/template.php';
+
   
-   function get_content(){ 
+   function get_content(){
+      
 ?>
+   
    <div class="container">
       <div class="row my-5">
          <div class="col-12 col-sm-10 col-md-8 mx-auto">
@@ -53,7 +56,7 @@
                   $result = mysqli_query($conn, $sql_select);
                   
                   while ($category = mysqli_fetch_assoc($result)){ ?>
-                     <option value="<?php echo $category['id'];?>">
+                     <option value= "<?php echo $category['id'];?>">
                         <?php echo $category['name'];?>
                      </option>
                <?php  } ?>

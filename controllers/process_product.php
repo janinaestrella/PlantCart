@@ -55,8 +55,8 @@
       header('location: ./../views/add_product.php');
      
    } else {
-     echo "<h2> Upload Failed! </h2>";
-     $_SESSION['error message'] = "All the fields are required";
+      // echo ("empty fields");
+     $_SESSION['error_message'] = "All fields are required";
      header('location: ./../views/add_product.php');
    }
    
