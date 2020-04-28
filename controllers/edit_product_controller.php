@@ -60,7 +60,8 @@
       if(empty($name) ||
          empty($price) ||
          empty($category) ||
-         empty($description) 
+         empty($description) ||
+         !is_numeric($price)
       ){
          return false;
       } else {
@@ -73,6 +74,7 @@
       require './../controllers/connection.php';
 
       if(checkIfFileSelected($_FILES['product-image'])){
+         //if changing everything
          $image = saveFile($_FILES['product-image']);
 
          $sql_update = "UPDATE products 
@@ -89,9 +91,23 @@
          header ('location: ./../views/catalog.php?id={$product_id}');
 
       } else {
-         header ("location: {$_SERVER['HTTP_REFERER']}");
+         //if not changing the image
+         $sql_update = "UPDATE products 
+                       SET name = '$product_name',
+                           price = $product_price,
+                           category_id = $product_category,
+                           description = '$product_description'
+                       WHERE
+                           id = $product_id
+                       ";
+
+         mysqli_query($conn, $sql_update);
+         header ('location: ./../views/catalog.php?id={$product_id}');
       }
 
+   } else {
+      echo ("fail");
+      // header ("location: {$_SERVER['HTTP_REFERER']}");
    }
 
 

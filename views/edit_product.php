@@ -37,7 +37,7 @@
                <!-- Product Image -->
                <div class="form-group">
                <label for="product-image" class="small">Product Image:</label>
-               <input type="file" name="product-image" id="product-image" class="form-control-file form-control-sm" 
+               <input type="file" name="product-image" alt="image unavailable" id="product-image" class="form-control-file form-control-sm" 
                   value="<?php echo $product['image'];?>">
                </div>
 
