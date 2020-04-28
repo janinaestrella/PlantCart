@@ -41,25 +41,36 @@
             <div class="card h-100">
                <img src="./../assets/images/<?= $indiv_products['image']?>" alt="Image Unavailable" class="card-img-top">
 
-            <div class="card-body">
-               <h4 class="card-title">
-                  <?= $indiv_products['name']?>
-               </h4>   
-               <p class="card-text">
-                  <?= $indiv_products['description']?>
-                  <br>
-                  <?= $indiv_products['price']?>
-                  </p>
-               
-            </div>
+               <div class="card-body">
+                  <h4 class="card-title">
+                     <?= $indiv_products['name']?>
+                  </h4>   
+                  <p class="card-text">
+                     <?= $indiv_products['description']?>
+                     <br>
+                     <?= $indiv_products['price']?>
+                     </p>
+                  
+               </div>
 
-            <div class="card-footer">
-               <!-- Quantity of the item that will be ordered -->
-               <input type="number" class="form-control" value=1>
-               <button type="button" class="btn btn-success addToCart" data-id="<?= $indiv_products['id']?>">
-                  Add to Cart
-               </button>
-            </div>
+               <div class="card-footer">
+                  <!-- Quantity of the item that will be ordered -->
+                  <input type="number" class="form-control" value=1>
+                  <button type="button" class="btn btn-success addToCart" data-id="<?= $indiv_products['id']?>">
+                     Add to Cart
+                  </button>
+               </div>
+
+               <!-- Admin Functions -->
+               <!-- Delete -->
+               <div class="row">
+                  <div class="col-12 col-sm-8 mb-2 mx-auto">
+
+                  <!-- Update -->
+                  <a href="./edit_product.php?id=<?php echo $indiv_products['id'];?>" class="btn btn-warning my-1 w-100">Edit Product</a>
+                  </div>
+               </div>
+
             </div>
 
          </div>
