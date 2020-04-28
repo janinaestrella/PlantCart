@@ -5,7 +5,8 @@
       require_once 'connection.php';
       $placeholder = $_GET['name'];
 ?>
-<div class="container">
+<div class="container mt-5">
+<h3 class="display-4 text-center mb-5">Edit Category Form</h3>
    <div class="row my-5">
       <div class="col-12 col-sm-10 col-md-8 mx-auto">   
    

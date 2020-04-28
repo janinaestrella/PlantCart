@@ -3,7 +3,7 @@
     
    function get_content(){ ?>
                           
-     <div class="container d-flex justify-content-center align-item-center min-vh-100">
+     <div class="container d-flex justify-content-center align-item-center min-vh-100 mt-5">
         <div class="row">
            <div class="col-md-12"> 
                 <h3 class="display-4  mb-5">Registration Form</h3> 
@@ -40,9 +40,8 @@
                      </div>
                   </div>    
                </form>
-               
-           
            </div>
+
         </div>
      </div>                     
                           

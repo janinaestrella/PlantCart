@@ -4,7 +4,7 @@
    
    function get_content(){ 
 ?>
-   <div class="container my-4">
+   <div class="container mt-5">
       <div class="row">
          <div class="col-lg-12">
          <h3 class="display-4 text-center mb-5">What's in your Cart</h3>

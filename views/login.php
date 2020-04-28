@@ -2,7 +2,8 @@
    require_once './../partials/template.php'; 
    
    function get_content(){ ?>
-      <div class="container">
+      <div class="container mt-5">
+      <h3 class="display-4 text-center mb-5">Log In</h3>
          <div class="row text-center my-3">
             <div class="col-md-4 offset-md-4">
                <form action="./../controllers/authenticate.php" method="post">
