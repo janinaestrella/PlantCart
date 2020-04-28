@@ -18,5 +18,6 @@
       $_SESSION['cart'][$product_id] = $product_quantity;
    }
 
+   #to display number of added item to cart counter
    echo getCartCount();
 ?>

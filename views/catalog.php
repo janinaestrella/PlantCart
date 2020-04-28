@@ -1,9 +1,9 @@
 <?php
    require_once './../partials/template.php';
-   
+
    function get_content(){ 
+   require_once './../controllers/connection.php';
 ?>
-   <?php require_once './../controllers/connection.php'; ?>
 
    <div class="container mt-5">
    <h3 class="display-4 text-center mb-5">Catalog</h3>
@@ -65,8 +65,6 @@
          </div>
 
       <?php } ?>
-
-
    </div>
    
 <?php

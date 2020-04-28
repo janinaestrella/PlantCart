@@ -43,7 +43,7 @@
    
    #validation for files with similar file names
    if(!$is_not_image && !$is_empty_file && !$is_empty_fields){
-      //   $image_destination = "./../assets/images/" .date("Y-m-d-h-i-s",time()). "$image_name";
+      #filename to be saved in db and local will have timestamp
      $image_name_date = date("Y-m-d-h-i-s",time()). "$image_name";
      $image_destination = "./../assets/images/$image_name_date";
      move_uploaded_file($image_tmpname,$image_destination);
@@ -55,52 +55,8 @@
       header('location: ./../views/add_product.php');
      
    } else {
-      // echo ("empty fields");
      $_SESSION['error_message'] = "All fields are required";
      header('location: ./../views/add_product.php');
-   }
-   
-   
-   
-   
-   
-   
-   // -------------------------------refactor-------------------------------//
-   
-   
-   // if (                                             //fields should not be empty
-	// 	empty($product_name) || 
-	// 	empty($product_price) || 
-	// 	empty($product_image) || 
-	// 	empty($product_description) || 
-	// 	empty($product_categoryid)
-	// ){
-	// 	// header('location: ./../views/add_product.php');
-   //    echo ("dapat ndi blank");
-      
-   // } elseif ($image_size <= 0){                      //size must not be 0
-   //    // header('location: ./../views/add_product.php');
-   //    echo("file size kulang");
-      
-   // } elseif ($image_type != "png" ||                //file extension name should be png, jpg, jpeg, svg, gif ONLY!
-   //           $image_type != "jpg" ||
-   //           $image_type != "jpeg" ||
-   //           $image_type != "svg" ||
-   //           $image_type != "gif") {
-   //    // header('location: ./../views/add_product.php');  
-   //    echo ("extension type mo mali");
-   //    var_dump($image_type);
-           
-   // } else {
-   //    // echo ("boom pasok sa database");
-      
-   //    $image_destination = "assets/images/$image_name";
-   //    move_uploaded_file($image_tmpname,$image_destination);
-      
-   //    $sql_insert = "INSERT INTO products (name, price, image, description) 
-   //                 VALUES ('$product_name', $product_price, LOAD_FILE ('$image_name'), '$product_description', $product_categoryid)";
-                  
-   //    $insert = mysqli_query($conn,$sql_insert);
-   // }                         
+   }                      
       
 ?>

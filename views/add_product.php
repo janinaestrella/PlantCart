@@ -1,9 +1,6 @@
 <?php
    require_once './../partials/template.php';
-
-  
-   function get_content(){
-      
+   function get_content(){      
 ?>
    
    <div class="container">
@@ -64,14 +61,13 @@
             </div>
          
             <div class="text-center">
-               <button class="btn btn-warning px-5" type="submit">Add New Product</button>
+               <button class="btn btn-success px-5" type="submit">Add New Product</button>
             </div>
          </form>
          </div>
       </div>
    </div>
-
-      
+   
 <?php
    };
 ?>
