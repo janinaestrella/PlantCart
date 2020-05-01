@@ -6,7 +6,7 @@
       return array_sum($_SESSION['cart']);
    }
 
-   #$_POST value is from data.append in addToCart.js
+   #getting data from addToCart.js nung nag fetch sya
    $product_id = $_POST['productId']; 
    $product_quantity = $_POST['productQuantity']; 
 

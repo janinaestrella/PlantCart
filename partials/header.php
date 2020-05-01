@@ -22,6 +22,7 @@
       ?>
         </span>
       
+      <!-- if may user na nakalogin -->
       <?php if(isset($_SESSION['user'])) { ?>
         <a class="nav-item nav-link" href="./../controllers/logout.php">Logout</a>
         

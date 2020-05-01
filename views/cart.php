@@ -67,7 +67,7 @@
                <td></td>
                <td></td>
                <td></td>
-               <td>Total: <?= number_format($total,2) ?> </td>
+               <td>Total: <span id="total-amount"><?=$total?></span></td>
                <td>
                   <!-- payment modes -->
                   <form action="./../controllers/create_transactions.php" method="post">
@@ -87,9 +87,16 @@
 
                         </select>
 
-                        <button type="submit" class="btn btn-success w-100 my-100">Checkout</button>
+                        <button type="submit" class="btn btn-success w-100 my-1">Checkout</button>
                      </div>
                   </form>
+
+                  <div class="text-center my-3">
+                  OR
+                  </div>
+                  
+                  <div id="paypal-smart-button"></div>
+
 
                   <!-- remove ALL items -->
                   <a href="./../controllers/clear_cart_controller.php" class="btn btn-outline-danger">Empty Cart</a>
@@ -111,7 +118,53 @@
    </div>
    
    <hr>
-      
+   <script
+	    src="https://www.paypal.com/sdk/js?client-id=AcNeMJnwJ9fCobZ0vss5lIL6dqlPqwQ9NNUIEDX5PbPDkd8Ynk4B02W_eWoDTdy87pd7-Wa-62rt1LpL&currency=PHP"> 
+	    // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+  	</script>
+	<script>
+		// console.log(typeof document.querySelector('#total-amount').innerHTML);
+
+		paypal.Buttons({
+			createOrder: function(data, actions) {
+			    // This function sets up the details of the transaction, including the amount and line item details.
+               return actions.order.create({
+			      	purchase_units: [{
+			      		amount: {
+			      			value: document.querySelector('#total-amount').innerHTML
+			      		}
+			      	}]
+			   });
+		   },
+         onApprove: function(data, actions) {
+      		// This function captures the funds from the transaction.
+      			return actions.order.capture().then(function(details) {
+        		// This function shows a transaction success message to your buyer.
+            //console.log(data.orderID);
+        		alert('Transaction completed by ' + details.payer.name.given_name);
+        		let formData = new FormData;
+  				formData.append("orderID",data.orderID);
+ 
+  				option = {
+  					method: "POST",
+  					body: formData
+  					// JSON.stringify(data) //converts js data to text/string
+
+  				}
+
+  				fetch("http://localhost:8000/controllers/create_paypal_transaction.php", option)
+  				// ()=>{} alternative to function()=>{}
+  				.then((response)=>{
+  					return response.text();
+  				})
+  				.then((data)=>{
+  					console.log(data);
+  				})
+      		});
+    		}
+		}).render('#paypal-smart-button')
+  		</script>
 <?php
    };
 ?>
+
