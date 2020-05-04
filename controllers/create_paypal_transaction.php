@@ -71,8 +71,4 @@
 
    header ("location: ./../views/transactions.php");
 
-
-
-
-
 ?>
