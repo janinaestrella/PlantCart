@@ -1,6 +1,6 @@
-CREATE DATABASE b57_ecommerce;
+CREATE DATABASE heroku_9a49cba5cd854e8;
 
-USE b57_ecommerce; 
+USE heroku_9a49cba5cd854e8; 
 
 -- Table structure for table `categories`
 
