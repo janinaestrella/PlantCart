@@ -12,11 +12,11 @@
    //host
    $host = 'us-cdbr-east-02.cleardb.com';
    //db_username
-   $db_username = 'b15d79c27aa82d';
+   $db_username = 'b5c279376e12a5';
    //db_password
-   $db_password='4110abde';
+   $db_password='ff8a9a6c';
    //db_name
-   $db_name = 'heroku_9a49cba5cd854e8';
+   $db_name = 'heroku_e7abda62c58e4f1';
    
    $conn = mysqli_connect( $host, $db_username, $db_password, $db_name );
    
