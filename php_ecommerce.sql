@@ -1,4 +1,4 @@
-CREATE DATABASE heroku_9a49cba5cd854e8;
+-- CREATE DATABASE heroku_9a49cba5cd854e8;
 
 USE heroku_9a49cba5cd854e8; 
 
