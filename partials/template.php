@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="../assets/css/style.css">
     
-    <title>Batch 57 PHP Ecommerce</title>
+    <title>PlantCart</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
     
