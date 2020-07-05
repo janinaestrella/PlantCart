@@ -2,22 +2,8 @@
    require './../partials/template.php';
 
    function get_content() { 
-?>
-   <?php 
-   $get_transactions = "SELECT 
-                        transactions.transaction_code,
-                        transactions.total,
-                        users.firstname,
-                        users.lastname,
-                        payment_modes.name as payment_name,
-                        statuses.name as status_name,
-                        transactions.id
-                        FROM transactions
-                        JOIN users ON (transactions.user_id = users.id)
-                        JOIN payment_modes ON (transactions.payment_mode_id = payment_modes.id)
-                        JOIN statuses ON (transactions.status_id = statuses.id)
-                        WHERE users.id = {$_SESSION['user']['id']}";                         
-   ?>
+?>             
+ 
    <div class="container">
       <div class="row my-5">
          <div class="col-12 col-sm-10 col-md-8 mx-auto">   
