@@ -55,7 +55,16 @@
 
                      <div class="modal-footer">
                         <a href="./../controllers/delete_product.php?id=<?php echo $indiv_products['id']?>" 
-                           class="btn btn-outline-primary" id="confirm-delete">Yes</a> <?php echo $indiv_products['id'];?>
+                           class="btn btn-outline-primary" id="confirm-delete">Yes</a> 
+
+                           <?php 
+
+                           $sql_delete = "DELETE FROM products WHERE id={$indiv_products['id']}";
+   
+                           //connect to database and perform query
+                           mysqli_query($conn, $sql_delete);
+
+                           ?>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                      </div>  
                   </div>
