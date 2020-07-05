@@ -63,7 +63,7 @@
    
                            //connect to database and perform query
                            mysqli_query($conn, $sql_delete);
-
+                           
                            ?>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                      </div>  

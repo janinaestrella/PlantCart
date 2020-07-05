@@ -26,7 +26,7 @@
       $is_not_image = true;
       $is_empty_file = true;
 
-      //to check is file size is not 0
+      //to validate file type
       if (
          $filetype == "jpg" ||
          $filetype == "jpeg" ||
@@ -37,12 +37,12 @@
          $is_not_image = false;
       }
 
-      //to validate name
+      //to check is file size is not 0
       if ($filesize > 0){
          $is_empty_file = false;
       }
 
-      //to validate file type
+      //file should not be empty and should be an image
       if (!$is_empty_file && !$is_not_image){
          $filename_with_date = date("Y-m-d-h-i-s",time()) . "$filename";
 			$destination = "../assets/images/" . $filename_with_date;
