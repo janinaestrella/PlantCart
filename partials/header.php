@@ -21,6 +21,8 @@
         }
       ?>
         </span>
+
+      <a class="nav-item nav-link" href="./../views/transactions.php">Transactions</a>
       
       <!-- if may user na nakalogin -->
       <?php if(isset($_SESSION['user'])) { ?>
